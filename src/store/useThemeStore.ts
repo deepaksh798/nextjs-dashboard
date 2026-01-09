@@ -20,7 +20,7 @@ export const useThemeStore = create<ThemeState>((set) => ({
   initTheme: () => {
     if (typeof window === "undefined") return;
 
-    const savedTheme = localStorage.getItem("theme") || "cupcake";
+    const savedTheme = localStorage.getItem("theme") || "nord";
     document.documentElement.setAttribute("data-theme", savedTheme);
     set({ theme: savedTheme });
   },
